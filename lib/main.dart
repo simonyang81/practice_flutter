@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import 'material_app_example/material_app_example1.dart';
 import 'routes/pages.dart';
 import 'routes/routes.dart';
 
@@ -19,11 +20,10 @@ class MyApp extends StatelessWidget {
       showPerformanceOverlay: false,
       title: 'Practice Flutter',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.orange,
       ),
       getPages: Pages.routes,
       home: const MyHomePage(title: 'Practice Flutter'),
-
     );
   }
 }
