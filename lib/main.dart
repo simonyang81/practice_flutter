@@ -53,6 +53,18 @@ class _MyHomePageState extends State<MyHomePage> {
             TextButton(onPressed: () {
               Get.toNamed(Routes.materialAppExample1);
             }, child: const Text('material app example 1')),
+
+            const SizedBox(height: 5,),
+
+            TextButton(onPressed: () {
+              Get.toNamed(Routes.scaffoldExample);
+            }, child: const Text('scaffold app')),
+
+            const SizedBox(height: 5,),
+
+            TextButton(onPressed: () {
+              Get.toNamed(Routes.appBarExample);
+            }, child: const Text('app bar')),
             
           ],
         ),

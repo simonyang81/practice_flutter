@@ -30,6 +30,9 @@ class _MaterialAppExample1State extends State<MaterialAppExample1> {
 
   @override
   Widget build(BuildContext context) {
+
+    MediaQueryData mediaQueryData = MediaQuery.of(context);
+
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       navigatorKey: _navigatorKey,
@@ -50,31 +53,32 @@ class _MaterialAppExample1State extends State<MaterialAppExample1> {
       home: Scaffold(
         appBar: AppBar(
           title: const Text('Material App Example 1'),
+
         ),
         body: const Center(
           child: Text('MaterialApp'),
         ),
-        floatingActionButton: FloatingActionButton(
-          onPressed: () {
-            // showDialog(context: Get.context!, builder: (context) => const AlertDialog(title: Text('Alert'),),);
-            // showDialog(context: _navigatorKey.currentState!.context, builder: (context) => const AlertDialog(title: Text('Alert'),),);
-
-            // _scaffoldMessengerKey.currentState!.showSnackBar(const SnackBar(content: Text('SnackBar')));
-
-            // Navigator.of(_navigatorKey.currentState!.context).pushNamed('/C');
-
-            Navigator.of(_navigatorKey.currentState!.context).push(
-              MaterialPageRoute(builder: (context) {
-                return const A();
-              },
-              settings: const RouteSettings(name: '/A', arguments: {
-                'name': 'SIMON Y',
-              })
-            ));
-
-          },
-          child: const Icon(Icons.add_alert, color: Colors.white),
-        ),
+        // floatingActionButton: FloatingActionButton(
+        //   onPressed: () {
+        //     // showDialog(context: Get.context!, builder: (context) => const AlertDialog(title: Text('Alert'),),);
+        //     // showDialog(context: _navigatorKey.currentState!.context, builder: (context) => const AlertDialog(title: Text('Alert'),),);
+        //
+        //     // _scaffoldMessengerKey.currentState!.showSnackBar(const SnackBar(content: Text('SnackBar')));
+        //
+        //     // Navigator.of(_navigatorKey.currentState!.context).pushNamed('/C');
+        //
+        //     Navigator.of(_navigatorKey.currentState!.context).push(
+        //       MaterialPageRoute(builder: (context) {
+        //         return const A();
+        //       },
+        //       settings: const RouteSettings(name: '/A', arguments: {
+        //         'name': 'SIMON Y',
+        //       })
+        //     ));
+        //
+        //   },
+        //   child: const Icon(Icons.add_alert, color: Colors.white),
+        // ),
 
         persistentFooterButtons: [
           TextButton(onPressed: () {  }, child: const Text('Button 1'),),

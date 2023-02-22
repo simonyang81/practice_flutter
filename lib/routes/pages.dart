@@ -9,8 +9,10 @@
 ///
 
 import 'package:get/get.dart';
-import 'package:practice_flutter/material_app_example/material_app_example1.dart';
 
+import '../app_bar_example/app_bar_example.dart';
+import '../material_app_example/material_app_example1.dart';
+import '../scaffold_example/scaffold_example.dart';
 import 'routes.dart';
 
 class Pages {
@@ -20,6 +22,17 @@ class Pages {
     GetPage(
         name: Routes.materialAppExample1,
         page: () => const MaterialAppExample1(),
+        transition: Transition.rightToLeft),
+
+
+    GetPage(
+        name: Routes.scaffoldExample,
+        page: () => const ScaffoldExample(),
+        transition: Transition.rightToLeft),
+
+    GetPage(
+        name: Routes.appBarExample,
+        page: () => const AppBarExample(),
         transition: Transition.rightToLeft),
 
   ];
