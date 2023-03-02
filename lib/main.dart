@@ -65,6 +65,12 @@ class _MyHomePageState extends State<MyHomePage> {
             TextButton(onPressed: () {
               Get.toNamed(Routes.appBarExample);
             }, child: const Text('app bar')),
+
+            const SizedBox(height: 5,),
+
+            TextButton(onPressed: () {
+              Get.toNamed(Routes.tabBarExample);
+            }, child: const Text('tab bar')),
             
           ],
         ),

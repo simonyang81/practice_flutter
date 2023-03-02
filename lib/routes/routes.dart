@@ -17,6 +17,7 @@ abstract class Routes {
   static const materialAppExample1    = '/material-app-example-1';
   static const scaffoldExample        = '/scaffold-example';
   static const appBarExample          = '/app-bar-example';
+  static const tabBarExample          = '/tab-bar-example';
 
 
 }

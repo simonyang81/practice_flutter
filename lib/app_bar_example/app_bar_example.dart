@@ -1,6 +1,6 @@
 /// Copyright openuse.io © 2022
 /// FileName app_bar_example
-/// 
+///
 /// @Author simonyang81@gmail.com
 /// @Date 2023/2/22 00:07
 ///
@@ -19,7 +19,6 @@ class AppBarExample extends StatefulWidget {
 }
 
 class _AppBarExampleState extends State<AppBarExample> with SingleTickerProviderStateMixin {
-
   late TabController _tabController;
 
   @override
@@ -33,64 +32,45 @@ class _AppBarExampleState extends State<AppBarExample> with SingleTickerProvider
     return Scaffold(
       appBar: AppBar(
         title: const Text('App Bar Example'),
-        // title: TabBar(
-        //   controller: _tabController,
-        //   tabs: const [
-        //     Tab(text: '飞机', ),
-        //     Tab(text: '火车', ),
-        //     Tab(text: '汽车', ),
-        //   ],
-        // ),
         centerTitle: true,
         shadowColor: Colors.red,
         backgroundColor: Colors.green,
         foregroundColor: Colors.white,
         automaticallyImplyLeading: false,
-        // shape: const RoundedRectangleBorder(
-        //   side: BorderSide(
-        //     color: Colors.blue,
-        //     width: 5,
-        //   )
-        // ),
-        // actions: [
-        //   IconButton(
-        //     onPressed: () {  },
-        //     icon: const Icon(Icons.exposure_plus_1),
-        //   ),
-        //   IconButton(
-        //     onPressed: () {  },
-        //     icon: const Icon(Icons.exposure_plus_2),
-        //   )
-        // ],
-        bottom: TabBar(
+      ),
+      body: Column(children: [
+        const SizedBox(height: 20),
+        const Text('app bar example'),
+        const SizedBox(height: 20,),
+        TabBar(
           controller: _tabController,
-          labelColor: Colors.white,
           tabs: const [
-            Tab(text: '飞机', icon: Icon(Icons.airplanemode_active),),
-            Tab(text: '火车', icon: Icon(Icons.train),),
-            Tab(text: '汽车', icon: Icon(CupertinoIcons.car),),
+            Tab(
+              text: '飞机',
+              icon: Icon(Icons.airplanemode_active),
+            ),
+            Tab(
+              text: '火车',
+              icon: Icon(Icons.train),
+            ),
+            Tab(
+              text: '汽车',
+              icon: Icon(CupertinoIcons.car),
+            ),
           ],
         ),
-        // shape: BorderDirectional(
-        //     top: BorderSide(
-        //       color: Colors.grey.shade300,
-        //       width: 50,
-        //     ),
-        //   bottom: BorderSide(
-        //     color: Colors.red,
-        //     width: 50,
-        //   ),
-        //   start: BorderSide(
-        //     color: Colors.green,
-        //     width: 50,
-        //   ),
-        //   end: BorderSide(
-        //     color: Colors.blue,
-        //     width: 50,
-        //   ),
-        // ),
-      ),
-      body: const Center(child: Text('App Bar')),
+
+        Expanded(
+          child: TabBarView(
+            controller: _tabController,
+            children: const [
+              Center(child: Icon(Icons.airplanemode_active)),
+              Center(child: Icon(Icons.train)),
+              Center(child: Icon(CupertinoIcons.car)),
+            ],
+          ),
+        ),
+      ]),
     );
   }
 }
