@@ -12,6 +12,7 @@ import 'package:get/get.dart';
 
 import '../app_bar_example/app_bar_example.dart';
 import '../material_app_example/material_app_example1.dart';
+import '../padding_example/padding_example.dart';
 import '../scaffold_example/scaffold_example.dart';
 import '../tab_bar_example/tab_bar_example.dart';
 import 'routes.dart';
@@ -24,7 +25,6 @@ class Pages {
         name: Routes.materialAppExample1,
         page: () => const MaterialAppExample1(),
         transition: Transition.rightToLeft),
-
 
     GetPage(
         name: Routes.scaffoldExample,
@@ -39,6 +39,11 @@ class Pages {
     GetPage(
         name: Routes.tabBarExample,
         page: () => const TabBarExample(),
+        transition: Transition.rightToLeft),
+
+    GetPage(
+        name: Routes.paddingExample,
+        page: () => const PaddingExample(),
         transition: Transition.rightToLeft),
 
   ];

@@ -18,6 +18,7 @@ abstract class Routes {
   static const scaffoldExample        = '/scaffold-example';
   static const appBarExample          = '/app-bar-example';
   static const tabBarExample          = '/tab-bar-example';
+  static const paddingExample         = '/padding-example';
 
 
 }
