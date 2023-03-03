@@ -20,6 +20,7 @@ abstract class Routes {
   static const tabBarExample              = '/tab-bar-example';
   static const paddingExample             = '/padding-example';
   static const animatedPaddingExample     = '/animated-padding-example';
+  static const alignExample               = '/align-example';
 
 
 }

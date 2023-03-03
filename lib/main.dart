@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
       showPerformanceOverlay: false,
       title: 'Practice Flutter',
       theme: ThemeData(
-        primarySwatch: Colors.orange,
+        primarySwatch: Colors.blue,
       ),
       getPages: Pages.routes,
       home: const MyHomePage(title: 'Practice Flutter'),
@@ -83,6 +83,12 @@ class _MyHomePageState extends State<MyHomePage> {
             TextButton(onPressed: () {
               Get.toNamed(Routes.animatedPaddingExample);
             }, child: const Text('animate padding example')),
+
+            const SizedBox(height: 5,),
+
+            TextButton(onPressed: () {
+              Get.toNamed(Routes.alignExample);
+            }, child: const Text('align example')),
             
           ],
         ),
