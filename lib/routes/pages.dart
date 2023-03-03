@@ -9,6 +9,7 @@
 ///
 
 import 'package:get/get.dart';
+import 'package:practice_flutter/animated_padding_example/animated_padding_example.dart';
 
 import '../app_bar_example/app_bar_example.dart';
 import '../material_app_example/material_app_example1.dart';
@@ -44,6 +45,11 @@ class Pages {
     GetPage(
         name: Routes.paddingExample,
         page: () => const PaddingExample(),
+        transition: Transition.rightToLeft),
+
+    GetPage(
+        name: Routes.animatedPaddingExample,
+        page: () => const AnimatedPaddingExample(),
         transition: Transition.rightToLeft),
 
   ];

@@ -8,6 +8,7 @@
 ///
 ///
 
+import 'package:f_logs/f_logs.dart';
 import 'package:flutter/material.dart';
 
 class PaddingExample extends StatelessWidget {
@@ -22,14 +23,66 @@ class PaddingExample extends StatelessWidget {
         backgroundColor: Colors.blue,
         foregroundColor: Colors.white,
       ),
-      body: _buildContent()
+      body: _buildContent(context)
     );
   }
 
-  Widget _buildContent() {
+  Widget _buildContent(BuildContext context) {
     return Center(
       child: Column(
         children: [
+          Stack(
+            children: [
+              Align(
+                alignment: Alignment.centerLeft,
+                child: InkWell(
+                  onTap: () {
+                    FLog.info(text: 'Tap on green');
+                  },
+                  child: Container(
+                    width: 100,
+                    height: 100,
+                    color: Colors.green,
+                  ),
+                ),
+              ),
+              Align(
+                alignment: Alignment.center,
+                child: InkWell(
+                  onTap: () {
+                    FLog.info(text: 'Tap on red');
+                  },
+                  child: Container(
+                    width: 100,
+                    height: 100,
+                    color: Colors.red,
+                  ),
+                ),
+              ),
+            ],
+          ),
+          // Row(
+          //   mainAxisSize: MainAxisSize.max,
+          //   mainAxisAlignment: MainAxisAlignment.center,
+          //   children: [
+          //     Align(
+          //       alignment: Alignment.centerLeft,
+          //       child: Container(
+          //         width: 100,
+          //         height: 100,
+          //         color: Colors.green,
+          //       ),
+          //     ),
+          //     Container(
+          //       alignment: Alignment.center,
+          //       width: 100,
+          //       height: 100,
+          //       color: Colors.red,
+          //     ),
+          //   ]
+          // ),
+
+
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 20),
             child: Container(

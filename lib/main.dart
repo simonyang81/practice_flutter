@@ -77,6 +77,12 @@ class _MyHomePageState extends State<MyHomePage> {
             TextButton(onPressed: () {
               Get.toNamed(Routes.paddingExample);
             }, child: const Text('padding example')),
+
+            const SizedBox(height: 5,),
+
+            TextButton(onPressed: () {
+              Get.toNamed(Routes.animatedPaddingExample);
+            }, child: const Text('animate padding example')),
             
           ],
         ),
