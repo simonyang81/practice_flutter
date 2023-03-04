@@ -21,6 +21,7 @@ abstract class Routes {
   static const paddingExample             = '/padding-example';
   static const animatedPaddingExample     = '/animated-padding-example';
   static const alignExample               = '/align-example';
+  static const animatedAlignExample       = '/animated-align-example';
 
 
 }

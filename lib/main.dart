@@ -20,7 +20,13 @@ class MyApp extends StatelessWidget {
       showPerformanceOverlay: false,
       title: 'Practice Flutter',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        // primarySwatch: Colors.blue,
+        // colorScheme: ColorScheme.fromSwatch().copyWith(
+        //   primary: Colors.blue,
+        //   // background: Colors.grey,
+        //   // onPrimary: Colors.grey,
+        // ),
+
       ),
       getPages: Pages.routes,
       home: const MyHomePage(title: 'Practice Flutter'),
@@ -89,6 +95,12 @@ class _MyHomePageState extends State<MyHomePage> {
             TextButton(onPressed: () {
               Get.toNamed(Routes.alignExample);
             }, child: const Text('align example')),
+
+            const SizedBox(height: 5,),
+
+            TextButton(onPressed: () {
+              Get.toNamed(Routes.animatedAlignExample);
+            }, child: const Text('animated align example')),
             
           ],
         ),
