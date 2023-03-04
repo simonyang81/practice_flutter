@@ -101,6 +101,12 @@ class _MyHomePageState extends State<MyHomePage> {
             TextButton(onPressed: () {
               Get.toNamed(Routes.animatedAlignExample);
             }, child: const Text('animated align example')),
+
+            const SizedBox(height: 5,),
+
+            TextButton(onPressed: () {
+              Get.toNamed(Routes.buttonExample);
+            }, child: const Text('button example')),
             
           ],
         ),

@@ -14,6 +14,7 @@ import 'package:practice_flutter/animated_align_example/animated_align_example.d
 import 'package:practice_flutter/animated_padding_example/animated_padding_example.dart';
 
 import '../app_bar_example/app_bar_example.dart';
+import '../button_example/button_example.dart';
 import '../material_app_example/material_app_example1.dart';
 import '../padding_example/padding_example.dart';
 import '../scaffold_example/scaffold_example.dart';
@@ -62,6 +63,11 @@ class Pages {
     GetPage(
         name: Routes.animatedAlignExample,
         page: () => const AnimatedAlignExample(),
+        transition: Transition.rightToLeft),
+
+    GetPage(
+        name: Routes.buttonExample,
+        page: () => const ButtonExample(),
         transition: Transition.rightToLeft),
 
   ];
