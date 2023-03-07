@@ -12,6 +12,8 @@ import 'package:get/get.dart';
 import 'package:practice_flutter/align_example/align_example.dart';
 import 'package:practice_flutter/animated_align_example/animated_align_example.dart';
 import 'package:practice_flutter/animated_padding_example/animated_padding_example.dart';
+import 'package:practice_flutter/box_constraints_example/box_constraints_example.dart';
+import 'package:practice_flutter/text_example/text_example.dart';
 
 import '../app_bar_example/app_bar_example.dart';
 import '../button_example/button_example.dart';
@@ -68,6 +70,16 @@ class Pages {
     GetPage(
         name: Routes.buttonExample,
         page: () => const ButtonExample(),
+        transition: Transition.rightToLeft),
+
+    GetPage(
+        name: Routes.boxConstraintsExample,
+        page: () => const BoxConstraintsExample(),
+        transition: Transition.rightToLeft),
+
+    GetPage(
+        name: Routes.textExample,
+        page: () => const TextExample(),
         transition: Transition.rightToLeft),
 
   ];

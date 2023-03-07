@@ -23,6 +23,8 @@ abstract class Routes {
   static const alignExample               = '/align-example';
   static const animatedAlignExample       = '/animated-align-example';
   static const buttonExample              = '/button-example';
+  static const boxConstraintsExample      = '/box-constraints-example';
+  static const textExample                = '/text-example';
 
 
 }

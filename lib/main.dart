@@ -51,64 +51,78 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: Text(widget.title),
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            
-            TextButton(onPressed: () {
-              Get.toNamed(Routes.materialAppExample1);
-            }, child: const Text('material app example 1')),
+      body: SingleChildScrollView(
+        child: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              
+              TextButton(onPressed: () {
+                Get.toNamed(Routes.materialAppExample1);
+              }, child: const Text('material app example 1')),
 
-            const SizedBox(height: 5,),
+              const SizedBox(height: 5,),
 
-            TextButton(onPressed: () {
-              Get.toNamed(Routes.scaffoldExample);
-            }, child: const Text('scaffold app')),
+              TextButton(onPressed: () {
+                Get.toNamed(Routes.scaffoldExample);
+              }, child: const Text('scaffold app')),
 
-            const SizedBox(height: 5,),
+              const SizedBox(height: 5,),
 
-            TextButton(onPressed: () {
-              Get.toNamed(Routes.appBarExample);
-            }, child: const Text('app bar')),
+              TextButton(onPressed: () {
+                Get.toNamed(Routes.appBarExample);
+              }, child: const Text('app bar')),
 
-            const SizedBox(height: 5,),
+              const SizedBox(height: 5,),
 
-            TextButton(onPressed: () {
-              Get.toNamed(Routes.tabBarExample);
-            }, child: const Text('tab bar')),
+              TextButton(onPressed: () {
+                Get.toNamed(Routes.tabBarExample);
+              }, child: const Text('tab bar')),
 
-            const SizedBox(height: 5,),
+              const SizedBox(height: 5,),
 
-            TextButton(onPressed: () {
-              Get.toNamed(Routes.paddingExample);
-            }, child: const Text('padding example')),
+              TextButton(onPressed: () {
+                Get.toNamed(Routes.paddingExample);
+              }, child: const Text('padding example')),
 
-            const SizedBox(height: 5,),
+              const SizedBox(height: 5,),
 
-            TextButton(onPressed: () {
-              Get.toNamed(Routes.animatedPaddingExample);
-            }, child: const Text('animate padding example')),
+              TextButton(onPressed: () {
+                Get.toNamed(Routes.animatedPaddingExample);
+              }, child: const Text('animate padding example')),
 
-            const SizedBox(height: 5,),
+              const SizedBox(height: 5,),
 
-            TextButton(onPressed: () {
-              Get.toNamed(Routes.alignExample);
-            }, child: const Text('align example')),
+              TextButton(onPressed: () {
+                Get.toNamed(Routes.alignExample);
+              }, child: const Text('align example')),
 
-            const SizedBox(height: 5,),
+              const SizedBox(height: 5,),
 
-            TextButton(onPressed: () {
-              Get.toNamed(Routes.animatedAlignExample);
-            }, child: const Text('animated align example')),
+              TextButton(onPressed: () {
+                Get.toNamed(Routes.animatedAlignExample);
+              }, child: const Text('animated align example')),
 
-            const SizedBox(height: 5,),
+              const SizedBox(height: 5,),
 
-            TextButton(onPressed: () {
-              Get.toNamed(Routes.buttonExample);
-            }, child: const Text('button example')),
-            
-          ],
+              TextButton(onPressed: () {
+                Get.toNamed(Routes.buttonExample);
+              }, child: const Text('button example')),
+
+              const SizedBox(height: 5,),
+
+              TextButton(onPressed: () {
+                Get.toNamed(Routes.boxConstraintsExample);
+              }, child: const Text('box constraints example')),
+
+              const SizedBox(height: 5,),
+
+              TextButton(onPressed: () {
+                Get.toNamed(Routes.textExample);
+              }, child: const Text('text example')),
+              
+            ],
+          ),
         ),
       ),
     );
