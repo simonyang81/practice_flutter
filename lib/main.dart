@@ -56,6 +56,12 @@ class _MyHomePageState extends State<MyHomePage> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
+
+              TextButton(onPressed: () {
+                Get.toNamed(Routes.getXExample);
+              }, child: const Text('GetX Example')),
+
+              const SizedBox(height: 5,),
               
               TextButton(onPressed: () {
                 Get.toNamed(Routes.materialAppExample1);
@@ -120,7 +126,12 @@ class _MyHomePageState extends State<MyHomePage> {
               TextButton(onPressed: () {
                 Get.toNamed(Routes.textExample);
               }, child: const Text('text example')),
-              
+
+              const SizedBox(height: 5,),
+
+              TextButton(onPressed: () {
+                Get.toNamed(Routes.canvasExample);
+              }, child: const Text('Canvas Example')),
             ],
           ),
         ),

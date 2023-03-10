@@ -13,6 +13,8 @@ import 'package:practice_flutter/align_example/align_example.dart';
 import 'package:practice_flutter/animated_align_example/animated_align_example.dart';
 import 'package:practice_flutter/animated_padding_example/animated_padding_example.dart';
 import 'package:practice_flutter/box_constraints_example/box_constraints_example.dart';
+import 'package:practice_flutter/canvas_example/canvas_example.dart';
+import 'package:practice_flutter/get_x_example/get_x_example_view.dart';
 import 'package:practice_flutter/text_example/text_example.dart';
 
 import '../app_bar_example/app_bar_example.dart';
@@ -26,6 +28,11 @@ import 'routes.dart';
 class Pages {
 
   static final routes = [
+
+    GetPage(
+        name: Routes.getXExample,
+        page: () => const GetXExamplePage(),
+        transition: Transition.rightToLeft),
 
     GetPage(
         name: Routes.materialAppExample1,
@@ -80,6 +87,11 @@ class Pages {
     GetPage(
         name: Routes.textExample,
         page: () => const TextExample(),
+        transition: Transition.rightToLeft),
+
+    GetPage(
+        name: Routes.canvasExample,
+        page: () => const CanvasExample(),
         transition: Transition.rightToLeft),
 
   ];

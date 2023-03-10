@@ -14,6 +14,8 @@ abstract class Routes {
 
   static const main                 = '/main';
 
+  static const getXExample    = '/get-x-example';
+
   static const materialAppExample1        = '/material-app-example-1';
   static const scaffoldExample            = '/scaffold-example';
   static const appBarExample              = '/app-bar-example';
@@ -25,6 +27,8 @@ abstract class Routes {
   static const buttonExample              = '/button-example';
   static const boxConstraintsExample      = '/box-constraints-example';
   static const textExample                = '/text-example';
+
+  static const canvasExample              = '/canvas-example';
 
 
 }
