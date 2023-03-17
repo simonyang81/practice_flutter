@@ -14,6 +14,7 @@ import 'package:practice_flutter/animated_align_example/animated_align_example.d
 import 'package:practice_flutter/animated_padding_example/animated_padding_example.dart';
 import 'package:practice_flutter/box_constraints_example/box_constraints_example.dart';
 import 'package:practice_flutter/canvas_example/canvas_example.dart';
+import 'package:practice_flutter/container_example/container_example_view.dart';
 import 'package:practice_flutter/get_x_example/get_x_example_view.dart';
 import 'package:practice_flutter/text_example/text_example.dart';
 
@@ -90,9 +91,17 @@ class Pages {
         transition: Transition.rightToLeft),
 
     GetPage(
+        name: Routes.containerExample,
+        page: () => const ContainerExamplePage(),
+        transition: Transition.rightToLeft),
+
+    //
+
+    GetPage(
         name: Routes.canvasExample,
         page: () => const CanvasExample(),
         transition: Transition.rightToLeft),
+
 
   ];
 

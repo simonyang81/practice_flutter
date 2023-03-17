@@ -132,6 +132,15 @@ class _MyHomePageState extends State<MyHomePage> {
               TextButton(onPressed: () {
                 Get.toNamed(Routes.canvasExample);
               }, child: const Text('Canvas Example')),
+
+              const SizedBox(height: 5,),
+
+              TextButton(onPressed: () {
+                Get.toNamed(Routes.containerExample);
+              }, child: const Text('Container Example')),
+
+              const SizedBox(height: 40,),
+
             ],
           ),
         ),

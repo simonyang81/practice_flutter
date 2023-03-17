@@ -27,6 +27,7 @@ abstract class Routes {
   static const buttonExample              = '/button-example';
   static const boxConstraintsExample      = '/box-constraints-example';
   static const textExample                = '/text-example';
+  static const containerExample           = '/container-example';
 
   static const canvasExample              = '/canvas-example';
 
