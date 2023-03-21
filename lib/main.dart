@@ -139,6 +139,18 @@ class _MyHomePageState extends State<MyHomePage> {
                 Get.toNamed(Routes.containerExample);
               }, child: const Text('Container Example')),
 
+              const SizedBox(height: 5,),
+
+              TextButton(onPressed: () {
+                Get.toNamed(Routes.textFiledExample);
+              }, child: const Text('TextField Example')),
+
+              const SizedBox(height: 5,),
+
+              TextButton(onPressed: () {
+                Get.toNamed(Routes.snackBarExample);
+              }, child: const Text('Snack Bar Example')),
+
               const SizedBox(height: 40,),
 
             ],

@@ -28,6 +28,8 @@ abstract class Routes {
   static const boxConstraintsExample      = '/box-constraints-example';
   static const textExample                = '/text-example';
   static const containerExample           = '/container-example';
+  static const textFiledExample           = '/text-filed-example';
+  static const snackBarExample            = '/snack-bar-example';
 
   static const canvasExample              = '/canvas-example';
 

@@ -16,7 +16,9 @@ import 'package:practice_flutter/box_constraints_example/box_constraints_example
 import 'package:practice_flutter/canvas_example/canvas_example.dart';
 import 'package:practice_flutter/container_example/container_example_view.dart';
 import 'package:practice_flutter/get_x_example/get_x_example_view.dart';
+import 'package:practice_flutter/snackbar_example/snackbar_example.dart';
 import 'package:practice_flutter/text_example/text_example.dart';
+import 'package:practice_flutter/text_field_example/text_field_example.dart';
 
 import '../app_bar_example/app_bar_example.dart';
 import '../button_example/button_example.dart';
@@ -95,11 +97,19 @@ class Pages {
         page: () => const ContainerExamplePage(),
         transition: Transition.rightToLeft),
 
-    //
+    GetPage(
+        name: Routes.textFiledExample,
+        page: () => const TextFieldExample(),
+        transition: Transition.rightToLeft),
 
     GetPage(
         name: Routes.canvasExample,
         page: () => const CanvasExample(),
+        transition: Transition.rightToLeft),
+
+    GetPage(
+        name: Routes.snackBarExample,
+        page: () => const SnackBarExample(),
         transition: Transition.rightToLeft),
 
 

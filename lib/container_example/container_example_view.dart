@@ -32,33 +32,40 @@ class _ContainerExamplePageState extends State<ContainerExamplePage> {
       appBar: AppBar(
         title: const Text('Container Example'),
       ),
-      body: SizedBox.fromSize(
-        size: const Size(300, 300),
-        child: Container(
-          color: Colors.grey.withOpacity(0.3),
-          child: Obx(() {
-            return SizedBox(
-              width: 100,
-              height: 100,
-              child: ListView.separated(
-                  itemBuilder: (context, index) {
-                    return ListTile(
-                      title: Text(state.data[index]),
-                    );
-                  },
-                  separatorBuilder: (context, index) {
-                    return const Divider(
-                      color: Colors.grey,
-                      indent: 10,
-                      endIndent: 10,
-                      height: 1,
-                    );
-                  },
-                  itemCount: state.data.length
-              ),
-            );
-          }),
+      body: Container(
+        margin: EdgeInsets.symmetric(vertical: 40, horizontal: 20),
+        decoration: BoxDecoration(
+
+          // 边框的颜色与宽度
+          // border: Border.all(color: const Color(0xFFFF0000), width: 0.5),
+          // border: Border.symmetric(vertical: BorderSide(color: Color(0xFFFF0000), width: 0.5,)),
+
+          // 边框圆角
+          // borderRadius: const BorderRadius.all(Radius.circular(10)),
+            borderRadius: BorderRadius.vertical(top: Radius.circular(10)),
+          // 填充色
+          color: const Color(0xFF9E9E9E)
+
+
         ),
+        child: Obx(() {
+          return ListView.separated(
+              itemBuilder: (context, index) {
+                return ListTile(
+                  title: Text(state.data[index]),
+                );
+              },
+              separatorBuilder: (context, index) {
+                return const Divider(
+                  color: Colors.grey,
+                  indent: 10,
+                  endIndent: 10,
+                  height: 1,
+                );
+              },
+              itemCount: state.data.length
+          );
+        }),
       ),
       // body: Center(
       //   child: Column(
