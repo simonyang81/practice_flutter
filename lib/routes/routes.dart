@@ -30,6 +30,14 @@ abstract class Routes {
   static const containerExample           = '/container-example';
   static const textFiledExample           = '/text-filed-example';
   static const snackBarExample            = '/snack-bar-example';
+  static const spinkitExample             = '/spinkit-example';
+  static const dialogExample              = '/dialog-example';
+  static const bleExample                 = '/ble-example';
+  static const remainingTimeExample       = '/remaining-time-example';
+  static const listViewExample            = '/list-view-example';
+  static const batteryIconExample         = '/battery-icon-example';
+  static const painterExample             = '/painter-example';
+  static const sizedBoxExample            = '/sized-box-example';
 
   static const canvasExample              = '/canvas-example';
 

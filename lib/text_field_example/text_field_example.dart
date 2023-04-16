@@ -10,6 +10,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:get/get.dart';
 
 import '../widgets/smn_input_decoration.dart';
 
@@ -50,13 +51,19 @@ class _TextFieldExampleState extends State<TextFieldExample> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
 
-                    _buildText1(),
-                    const SizedBox(height: 20,),
-                    _buildText2(),
+                    Container(
+                        width: double.infinity,
+                        height: 300,
+                        child: _buildText1()),
+                    // const SizedBox(height: 20,),
+                    // _buildText2(),
 
 
                   ],
                 ),
+                // child: Container(
+                //   child: _buildText1(),
+                // ),
               ),
             ),
           ),
@@ -66,28 +73,41 @@ class _TextFieldExampleState extends State<TextFieldExample> {
   }
 
   Widget _buildText1() {
-    return TextField(
-      // controller: state.reNewPasswordCtrl,
-      decoration: SMNInputDecoration(
-          labelText: 'username',
-          // errorText: state.confirmPasswordErrorText,
-          // suffixIcon: IconButton(
-          //     onPressed: () => logic.pressReNewPasswordSuffixIcon(),
-          //     icon: Icon(state.isReNewPwdObscure ? CupertinoIcons.eye_slash : CupertinoIcons.eye,
-          //       color: Colors.black54,)
-          // )
-      ),
-      keyboardType: TextInputType.text,
-      textInputAction: TextInputAction.next,
-      maxLength: 10,
-      maxLengthEnforcement: MaxLengthEnforcement.none,
-      onSubmitted: (value) {
-        debugPrint('value: $value');
-      },
+    // return TextField(
+    //   // decoration: SMNInputDecoration(
+    //   //     labelText: 'username',
+    //   //     // errorText: state.confirmPasswordErrorText,
+    //   //     // suffixIcon: IconButton(
+    //   //     //     onPressed: () => logic.pressReNewPasswordSuffixIcon(),
+    //   //     //     icon: Icon(state.isReNewPwdObscure ? CupertinoIcons.eye_slash : CupertinoIcons.eye,
+    //   //     //       color: Colors.black54,)
+    //   //     // )
+    //   // ),
+    //   keyboardType: TextInputType.text,
+    //   textInputAction: TextInputAction.next,
+    //   // maxLength: 10,
+    //   maxLines: null,
+    //   minLines: null,
+    //   expands: true,
+    //   maxLengthEnforcement: MaxLengthEnforcement.none,
+    //   onSubmitted: (value) {
+    //     debugPrint('value: $value');
+    //   },
+    // );
 
-      // obscureText: state.isReNewPwdObscure,
-      // onChanged: (value) => logic.passwordTextChange(),
-      // onTap: () => logic.tapReNewPassword(),
+    return TextField(
+      decoration: InputDecoration(
+        hintText: "请输入",
+        hintStyle: TextStyle(color: Colors.white),
+        filled: true,
+        fillColor: Colors.white,
+        contentPadding:
+        EdgeInsets.symmetric(horizontal: 8, vertical: 10),
+        isCollapsed: true,
+      ),
+      inputFormatters: <TextInputFormatter>[
+        LengthLimitingTextInputFormatter(14) //限制长度
+      ],
     );
   }
 

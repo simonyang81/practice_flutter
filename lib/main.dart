@@ -151,6 +151,54 @@ class _MyHomePageState extends State<MyHomePage> {
                 Get.toNamed(Routes.snackBarExample);
               }, child: const Text('Snack Bar Example')),
 
+              const SizedBox(height: 5,),
+
+              TextButton(onPressed: () {
+                Get.toNamed(Routes.spinkitExample);
+              }, child: const Text('Spinkit Example')),
+
+              const SizedBox(height: 5,),
+
+              TextButton(onPressed: () {
+                Get.toNamed(Routes.dialogExample);
+              }, child: const Text('Dialog Example')),
+
+              const SizedBox(height: 5,),
+
+              TextButton(onPressed: () {
+                Get.toNamed(Routes.bleExample);
+              }, child: const Text('Ble Example')),
+
+              const SizedBox(height: 5,),
+
+              TextButton(onPressed: () {
+                Get.toNamed(Routes.remainingTimeExample);
+              }, child: const Text('Remaining Time  Example')),
+
+              const SizedBox(height: 5,),
+
+              TextButton(onPressed: () {
+                Get.toNamed(Routes.listViewExample);
+              }, child: const Text('List View Example')),
+
+              const SizedBox(height: 5,),
+
+              TextButton(onPressed: () {
+                Get.toNamed(Routes.batteryIconExample);
+              }, child: const Text('Battery Icon Example')),
+
+              const SizedBox(height: 5,),
+
+              TextButton(onPressed: () {
+                Get.toNamed(Routes.painterExample);
+              }, child: const Text('Painter Example')),
+
+              const SizedBox(height: 5,),
+
+              TextButton(onPressed: () {
+                Get.toNamed(Routes.sizedBoxExample);
+              }, child: const Text('SizedBox Example')),
+
               const SizedBox(height: 40,),
 
             ],

@@ -41,13 +41,13 @@ class _ButtonExampleState extends State<ButtonExample> {
             ),
           ),
           const SizedBox(height: 10,),
-          FilledButton(
-            onPressed: () {  },
-            child: const Padding(
-              padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-              child: Text('Filled Button', style: TextStyle(color: Colors.white, fontSize: 20),),
-            ),
-          ),
+          // FilledButton(
+          //   onPressed: () {  },
+          //   child: const Padding(
+          //     padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+          //     child: Text('Filled Button', style: TextStyle(color: Colors.white, fontSize: 20),),
+          //   ),
+          // ),
           const SizedBox(height: 10,),
           OutlinedButton(
             style: OutlinedButton.styleFrom(
