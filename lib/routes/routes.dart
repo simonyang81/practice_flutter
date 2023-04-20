@@ -38,6 +38,7 @@ abstract class Routes {
   static const batteryIconExample         = '/battery-icon-example';
   static const painterExample             = '/painter-example';
   static const sizedBoxExample            = '/sized-box-example';
+  static const heatingExample             = '/heating-example';
 
   static const canvasExample              = '/canvas-example';
 
