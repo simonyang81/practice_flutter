@@ -39,6 +39,9 @@ abstract class Routes {
   static const painterExample             = '/painter-example';
   static const sizedBoxExample            = '/sized-box-example';
   static const heatingExample             = '/heating-example';
+  static const flutterTimerExample        = '/flutter-timer-example';
+  static const counterExample             = '/counter-example';
+  static const hookExample                = "/hookExample";
 
   static const canvasExample              = '/canvas-example';
 

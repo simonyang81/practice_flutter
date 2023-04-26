@@ -205,6 +205,24 @@ class _MyHomePageState extends State<MyHomePage> {
                 Get.toNamed(Routes.heatingExample);
               }, child: const Text('Heating Example')),
 
+              const SizedBox(height: 5,),
+
+              TextButton(onPressed: () {
+                Get.toNamed(Routes.flutterTimerExample);
+              }, child: const Text('Flutter Timer Example')),
+
+              const SizedBox(height: 5,),
+
+              TextButton(onPressed: () {
+                Get.toNamed(Routes.counterExample);
+              }, child: const Text('Counter Example')),
+
+              const SizedBox(height: 5,),
+
+              TextButton(onPressed: () {
+                Get.toNamed(Routes.hookExample);
+              }, child: const Text('Hook Example')),
+
               const SizedBox(height: 40,),
 
             ],

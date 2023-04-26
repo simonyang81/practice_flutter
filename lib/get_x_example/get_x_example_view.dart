@@ -11,18 +11,25 @@ class GetXExamplePage extends StatefulWidget {
 }
 
 class _GetXExamplePageState extends State<GetXExamplePage> {
+  
+
+  final _name = ''.obs;
+  get name => _name.value;
+  set name(val) => _name.value = val;
+
+
   final logic1 = Get.put(GetXExampleLogic());
   final logic2 = Get.put(GetXExampleLogic());
   final state = Get
       .find<GetXExampleLogic>()
       .state;
 
-  RxString? _context;
+  RxString? _content;
 
   @override
   void initState() {
     super.initState();
-    _context = RxString('Hello, world');
+    _content = RxString('Hello, world');
   }
 
   @override
@@ -30,9 +37,9 @@ class _GetXExamplePageState extends State<GetXExamplePage> {
     return Scaffold(
       body: Center(child: Obx(() {
         return Text(
-          _context != null ? _context!.value : '', style: const TextStyle(color: Colors.black, fontSize: 18),);
+          _content != null ? _content!.value : '', style: const TextStyle(color: Colors.black, fontSize: 18),);
       })),
-      floatingActionButton: IconButton(icon: const Icon(Icons.add, color: Colors.purple), onPressed: () => _context!.value = 'Simon',),
+      floatingActionButton: IconButton(icon: const Icon(Icons.add, color: Colors.purple), onPressed: () => _content!.value = 'Simon',),
     );
   }
 

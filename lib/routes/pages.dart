@@ -17,8 +17,11 @@ import 'package:practice_flutter/ble_example/ble_example.dart';
 import 'package:practice_flutter/box_constraints_example/box_constraints_example.dart';
 import 'package:practice_flutter/canvas_example/canvas_example.dart';
 import 'package:practice_flutter/container_example/container_example_view.dart';
+import 'package:practice_flutter/flutter_timer_example/flutter_timer_example.dart';
+import 'package:practice_flutter/get_x_example/counter_page/counter_view.dart';
 import 'package:practice_flutter/get_x_example/get_x_example_view.dart';
 import 'package:practice_flutter/heating_example/heating_example.dart';
+import 'package:practice_flutter/hook_example/hook_example.dart';
 import 'package:practice_flutter/list_example/list_view_example.dart';
 import 'package:practice_flutter/painter_example/painter_example.dart';
 import 'package:practice_flutter/remaining_time_example/remaining_time_example.dart';
@@ -165,6 +168,16 @@ class Pages {
         name: Routes.heatingExample,
         page: () => const HeatingExample(),
         transition: Transition.rightToLeft),
+
+    GetPage(
+        name: Routes.flutterTimerExample,
+        page: () => const FlutterTimerExample(),
+        transition: Transition.rightToLeft),
+
+    // CounterPagePage 的路由
+    GetPage(name: Routes.counterExample, page: () => CounterPage(), transition: Transition.rightToLeft),
+
+    GetPage(name: Routes.hookExample, page: () => HookExample(), transition: Transition.rightToLeft),
 
 
   ];
