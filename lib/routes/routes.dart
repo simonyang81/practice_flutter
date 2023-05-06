@@ -46,6 +46,7 @@ abstract class Routes {
   static const overflowBoxExample         = '/overflow-box-example';
   static const aspectRatioExample         = '/aspect-ratio-example';
   static const fractionallySizedBoxExample  = '/fractionally-sized-box-example';
+  static const clipRectExample            = '/clip-rect-example';
 
   static const canvasExample              = '/canvas-example';
 

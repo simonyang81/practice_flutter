@@ -247,6 +247,12 @@ class _MyHomePageState extends State<MyHomePage> {
                 Get.toNamed(Routes.fractionallySizedBoxExample);
               }, child: const Text('Fractionally Sized Box Example')),
 
+              const SizedBox(height: 5,),
+
+              TextButton(onPressed: () {
+                Get.toNamed(Routes.clipRectExample);
+              }, child: const Text('Clip Rect Example')),
+
               const SizedBox(height: 40,),
 
             ],

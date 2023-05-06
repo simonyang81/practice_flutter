@@ -16,6 +16,7 @@ import 'package:practice_flutter/battery_icon_example/battery_icon_example.dart'
 import 'package:practice_flutter/ble_example/ble_example.dart';
 import 'package:practice_flutter/box_constraints_example/box_constraints_example.dart';
 import 'package:practice_flutter/canvas_example/canvas_example.dart';
+import 'package:practice_flutter/clip_rect_example/clip_rect_example.dart';
 import 'package:practice_flutter/container_example/container_example_view.dart';
 import 'package:practice_flutter/fitted_box_example/FittedBoxExample.dart';
 import 'package:practice_flutter/flutter_timer_example/flutter_timer_example.dart';
@@ -190,6 +191,8 @@ class Pages {
     GetPage(name: Routes.aspectRatioExample, page: () => const AspectRatioExample(), transition: Transition.rightToLeft),
 
     GetPage(name: Routes.fractionallySizedBoxExample, page: () => const FractionallySizedBoxExample(), transition: Transition.rightToLeft),
+
+    GetPage(name: Routes.clipRectExample, page: () => const ClipRectExample(), transition: Transition.rightToLeft),
 
 
   ];
