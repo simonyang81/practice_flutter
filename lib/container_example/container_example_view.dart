@@ -8,6 +8,8 @@
 ///
 ///
 
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:practice_flutter/container_example/container_example_logic.dart';
@@ -22,9 +24,7 @@ class ContainerExamplePage extends StatefulWidget {
 class _ContainerExamplePageState extends State<ContainerExamplePage> {
 
   final logic = Get.put(ContainerExampleLogic());
-  final state = Get
-      .find<ContainerExampleLogic>()
-      .state;
+  final state = Get.find<ContainerExampleLogic>().state;
 
   @override
   Widget build(BuildContext context) {
@@ -32,59 +32,62 @@ class _ContainerExamplePageState extends State<ContainerExamplePage> {
       appBar: AppBar(
         title: const Text('Container Example'),
       ),
-      body: ClipRRect(
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
 
-        child: Align(
-          alignment: Alignment.topLeft,
-          widthFactor: 1,
-          child: Container(
-            // constraints: BoxConstraints(
-            //
-            // ),
-            margin: EdgeInsets.symmetric(vertical: 40, horizontal: 20),
-            decoration: BoxDecoration(
-
-              // 边框的颜色与宽度
-              // border: Border.all(color: const Color(0xFFFF0000), width: 0.5),
-              // border: Border.symmetric(vertical: BorderSide(color: Color(0xFFFF0000), width: 0.5,)),
-
-              // 边框圆角
-              // borderRadius: const BorderRadius.all(Radius.circular(10)),
-                borderRadius: BorderRadius.vertical(top: Radius.circular(10)),
-              // 填充色
-              color: const Color(0xFF9E9E9E)
-
-
+            GetBuilder<ContainerExampleLogic>(
+              assignId: true,
+              builder: (logic) {
+                return AnimatedContainer(
+                  duration: const Duration(milliseconds: 1000),
+                  width: state.width,
+                  height: state.height,
+                  color: state.color,
+                  transform: Matrix4.rotationZ(state.matrix4),
+                );
+              },
             ),
-            child: Obx(() {
-              return ListView.separated(
-                  itemBuilder: (context, index) {
-                    return ListTile(
-                      title: Text(state.data[index]),
-                    );
-                  },
-                  separatorBuilder: (context, index) {
-                    return const Divider(
-                      color: Colors.grey,
-                      indent: 10,
-                      endIndent: 10,
-                      height: 1,
-                    );
-                  },
-                  itemCount: state.data.length
-              );
-            }),
-          ),
+
+            Padding(
+              padding: const EdgeInsets.all(20.0),
+              child: Row(
+                children: [
+                  ElevatedButton(
+                    onPressed: () {
+                      state.width = 150;
+                      state.height = 150;
+                      logic.update();
+                    },
+                    child: const Text('改变宽高'),
+                  ),
+
+                  const SizedBox(width: 10,),
+
+                  ElevatedButton(onPressed: () {
+
+                    // debugPrint('-->> 改变颜色');
+
+                    state.color = Colors.red;
+                    logic.update();
+                  }, child: const Text('改变颜色')),
+
+                  const SizedBox(width: 10,),
+
+                  ElevatedButton(onPressed: () {
+
+                    state.matrix4 = pi / 4;
+                    logic.update();
+
+                  }, child: const Text('改变旋转角度')),
+
+                ],
+              ),
+            )
+          ],
         ),
       ),
-      // body: Center(
-      //   child: Column(
-      //     mainAxisAlignment: MainAxisAlignment.center,
-      //     children: const [
-      //       Text('Container Example', style: TextStyle(fontSize: 18, color: Colors.black),),
-      //     ],
-      //   ),
-      // ),
     );
   }
 }

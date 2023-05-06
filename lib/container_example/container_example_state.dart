@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 /// FileName container_example_state
@@ -13,6 +14,11 @@ import 'package:get/get.dart';
 class ContainerExampleState {
 
   late RxList<String> data;
+
+  double width = 100;
+  double height = 100;
+  MaterialColor color = Colors.blue;
+  double matrix4 = 0.0;
 
   ContainerExampleState() {
     data = <String>[].obs;

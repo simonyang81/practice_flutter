@@ -10,7 +10,6 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:get/get.dart';
 
 import '../widgets/smn_input_decoration.dart';
 
@@ -28,47 +27,72 @@ class _TextFieldExampleState extends State<TextFieldExample> {
       appBar: AppBar(
         title: const Text('TextFiled Example'),
       ),
-      body: GestureDetector(
-        behavior: HitTestBehavior.opaque,
-        onTap: () {
-          debugPrint('on tap Center -->>');
-          SystemChannels.textInput.invokeMethod('TextInput.hide');
-        },
-        child: Center(
-          child: GestureDetector(
-            onTap: () {
-              debugPrint('on tap Padding -->>');
-              SystemChannels.textInput.invokeMethod('TextInput.hide');
-            },
-            child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 20),
-              child: GestureDetector(
-                onTap: () {
-                  debugPrint('on tap Column -->>');
-                  SystemChannels.textInput.invokeMethod('TextInput.hide');
-                },
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-
-                    Container(
-                        width: double.infinity,
-                        height: 300,
-                        child: _buildText1()),
-                    // const SizedBox(height: 20,),
-                    // _buildText2(),
-
-
-                  ],
-                ),
-                // child: Container(
-                //   child: _buildText1(),
-                // ),
+      body: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 20),
+        child: Column(
+          children: const [
+            TextField(
+              decoration: InputDecoration(
+                // 设置无边框
+                border: InputBorder.none,
               ),
+            ),
+
+            SizedBox(height: 50,),
+
+        TextField(
+          decoration: InputDecoration(
+            // 上下左右都有边框
+            border: OutlineInputBorder(
+              // 设置边框4个角的弧度
+              borderRadius: BorderRadius.all(Radius.circular(20)),
             ),
           ),
         ),
+          ],
+        ),
       ),
+      // body: GestureDetector(
+      //   behavior: HitTestBehavior.opaque,
+      //   onTap: () {
+      //     debugPrint('on tap Center -->>');
+      //     SystemChannels.textInput.invokeMethod('TextInput.hide');
+      //   },
+      //   child: Center(
+      //     child: GestureDetector(
+      //       onTap: () {
+      //         debugPrint('on tap Padding -->>');
+      //         SystemChannels.textInput.invokeMethod('TextInput.hide');
+      //       },
+      //       child: Padding(
+      //         padding: const EdgeInsets.symmetric(horizontal: 20),
+      //         child: GestureDetector(
+      //           onTap: () {
+      //             debugPrint('on tap Column -->>');
+      //             SystemChannels.textInput.invokeMethod('TextInput.hide');
+      //           },
+      //           child: Column(
+      //             mainAxisAlignment: MainAxisAlignment.center,
+      //             children: [
+      //
+      //               SizedBox(
+      //                   width: double.infinity,
+      //                   height: 300,
+      //                   child: _buildText1()),
+      //               // const SizedBox(height: 20,),
+      //               // _buildText2(),
+      //
+      //
+      //             ],
+      //           ),
+      //           // child: Container(
+      //           //   child: _buildText1(),
+      //           // ),
+      //         ),
+      //       ),
+      //     ),
+      //   ),
+      // ),
     );
   }
 
@@ -96,7 +120,7 @@ class _TextFieldExampleState extends State<TextFieldExample> {
     // );
 
     return TextField(
-      decoration: InputDecoration(
+      decoration: const InputDecoration(
         hintText: "请输入",
         hintStyle: TextStyle(color: Colors.white),
         filled: true,
@@ -114,7 +138,7 @@ class _TextFieldExampleState extends State<TextFieldExample> {
   Widget _buildText2() {
     return TextField(
       // controller: state.reNewPasswordCtrl,
-      decoration: SMNInputDecoration(
+      decoration: const SMNInputDecoration(
         labelText: 'password',
         // errorText: state.confirmPasswordErrorText,
         // suffixIcon: IconButton(

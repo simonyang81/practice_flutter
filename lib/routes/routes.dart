@@ -42,6 +42,10 @@ abstract class Routes {
   static const flutterTimerExample        = '/flutter-timer-example';
   static const counterExample             = '/counter-example';
   static const hookExample                = "/hookExample";
+  static const fittedBoxExample           = '/fitted-box-example';
+  static const overflowBoxExample         = '/overflow-box-example';
+  static const aspectRatioExample         = '/aspect-ratio-example';
+  static const fractionallySizedBoxExample  = '/fractionally-sized-box-example';
 
   static const canvasExample              = '/canvas-example';
 

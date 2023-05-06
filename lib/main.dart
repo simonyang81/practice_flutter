@@ -223,6 +223,30 @@ class _MyHomePageState extends State<MyHomePage> {
                 Get.toNamed(Routes.hookExample);
               }, child: const Text('Hook Example')),
 
+              const SizedBox(height: 5,),
+
+              TextButton(onPressed: () {
+                Get.toNamed(Routes.fittedBoxExample);
+              }, child: const Text('Fitted Box Example')),
+
+              const SizedBox(height: 5,),
+
+              TextButton(onPressed: () {
+                Get.toNamed(Routes.overflowBoxExample);
+              }, child: const Text('Overflow Box Example')),
+
+              const SizedBox(height: 5,),
+
+              TextButton(onPressed: () {
+                Get.toNamed(Routes.aspectRatioExample);
+              }, child: const Text('Aspect Ratio Example')),
+
+              const SizedBox(height: 5,),
+
+              TextButton(onPressed: () {
+                Get.toNamed(Routes.fractionallySizedBoxExample);
+              }, child: const Text('Fractionally Sized Box Example')),
+
               const SizedBox(height: 40,),
 
             ],
