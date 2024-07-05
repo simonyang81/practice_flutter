@@ -13,11 +13,11 @@ import 'package:practice_flutter/align_example/align_example.dart';
 import 'package:practice_flutter/animated_align_example/animated_align_example.dart';
 import 'package:practice_flutter/animated_padding_example/animated_padding_example.dart';
 import 'package:practice_flutter/battery_icon_example/battery_icon_example.dart';
-import 'package:practice_flutter/ble_example/ble_example.dart';
 import 'package:practice_flutter/box_constraints_example/box_constraints_example.dart';
 import 'package:practice_flutter/canvas_example/canvas_example.dart';
 import 'package:practice_flutter/clip_rect_example/clip_rect_example.dart';
 import 'package:practice_flutter/container_example/container_example_view.dart';
+import 'package:practice_flutter/dropdown_button_example/dropdown_button_example.dart';
 import 'package:practice_flutter/fitted_box_example/FittedBoxExample.dart';
 import 'package:practice_flutter/flutter_timer_example/flutter_timer_example.dart';
 import 'package:practice_flutter/fractionally_sized_box_example/fractionally_sized_box_example.dart';
@@ -25,15 +25,20 @@ import 'package:practice_flutter/get_x_example/counter_page/counter_view.dart';
 import 'package:practice_flutter/get_x_example/get_x_example_view.dart';
 import 'package:practice_flutter/heating_example/heating_example.dart';
 import 'package:practice_flutter/hook_example/hook_example.dart';
+import 'package:practice_flutter/layout_example/layout_example.dart';
 import 'package:practice_flutter/list_example/list_view_example.dart';
 import 'package:practice_flutter/overflow_box_example/overflow_box_example.dart';
 import 'package:practice_flutter/painter_example/painter_example.dart';
+import 'package:practice_flutter/preview_file/preview_excel_file.dart';
+import 'package:practice_flutter/records_example/record_example.dart';
 import 'package:practice_flutter/remaining_time_example/remaining_time_example.dart';
+import 'package:practice_flutter/share_csv_file_example/share_csv_file_example_view.dart';
 import 'package:practice_flutter/sized_box_example/SizedBoxExample.dart';
 import 'package:practice_flutter/snackbar_example/snackbar_example.dart';
 import 'package:practice_flutter/spinkit_example/spinkit_example.dart';
 import 'package:practice_flutter/text_example/text_example.dart';
 import 'package:practice_flutter/text_field_example/text_field_example.dart';
+import 'package:practice_flutter/uni_links_example/uni_links_example.dart';
 
 import '../app_bar_example/app_bar_example.dart';
 import '../aspect_ratio_example/aspect_ratio_example.dart';
@@ -140,11 +145,6 @@ class Pages {
         transition: Transition.rightToLeft),
 
     GetPage(
-        name: Routes.bleExample,
-        page: () => const BleExample(),
-        transition: Transition.rightToLeft),
-
-    GetPage(
         name: Routes.remainingTimeExample,
         page: () => const RemainingTimeExample(),
         transition: Transition.rightToLeft),
@@ -193,7 +193,19 @@ class Pages {
     GetPage(name: Routes.fractionallySizedBoxExample, page: () => const FractionallySizedBoxExample(), transition: Transition.rightToLeft),
 
     GetPage(name: Routes.clipRectExample, page: () => const ClipRectExample(), transition: Transition.rightToLeft),
+    
+    GetPage(name: Routes.uniLineExample, page: () => const UniLinksExample(), transition: Transition.rightToLeft),
 
+    GetPage(name: Routes.recordExample, page: () => const RecordExample(), transition: Transition.rightToLeft,),
+    GetPage(name: Routes.home, page: () => const MyHomePage(title: 'Practice Flutter',), transition: Transition.rightToLeft,),
+
+    GetPage(name: Routes.layoutExample, page: () => const LayoutExample(), transition: Transition.rightToLeft,),
+
+    GetPage(name: Routes.shareCSVFileExample, page: () => const ShareCsvFileExamplePage(), transition: Transition.rightToLeft,),
+
+    GetPage(name: Routes.previewExcelFile, page: () => const PreviewExcelFile(), transition: Transition.rightToLeft,),
+
+    GetPage(name: Routes.dropdownButtonExample, page: () => const DropdownButtonExample(), transition: Transition.rightToLeft,),
 
   ];
 

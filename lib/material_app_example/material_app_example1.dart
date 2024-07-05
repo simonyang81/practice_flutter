@@ -8,8 +8,6 @@
 ///
 ///
 
-import 'package:f_logs/f_logs.dart';
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:get/get.dart';
@@ -136,13 +134,13 @@ class MyObserver extends NavigatorObserver {
   @override
   void didPush(Route route, Route? previousRoute) {
     super.didPush(route, previousRoute);
-    FLog.info(text: 'didPush');
+    debugPrint('didPush -->>');
   }
 
   @override
   void didPop(Route route, Route? previousRoute) {
     super.didPop(route, previousRoute);
-    FLog.info(text: 'didPop');
+    debugPrint('didPop -->>');
   }
 }
 

@@ -1,15 +1,23 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:practice_flutter/test_getx/test_getx_logic.dart';
+import 'package:uni_links/uni_links.dart';
 
-import 'material_app_example/material_app_example1.dart';
+import 'pop_scope_example/WillPopScopeExample.dart';
 import 'routes/pages.dart';
 import 'routes/routes.dart';
 
 void main() {
+
+  WidgetsFlutterBinding.ensureInitialized();
+  final logic = Get.put(TestGetxLogic());
   runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
+
   const MyApp({super.key});
 
   // This widget is the root of your application.
@@ -19,16 +27,8 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       showPerformanceOverlay: false,
       title: 'Practice Flutter',
-      theme: ThemeData(
-        // primarySwatch: Colors.blue,
-        // colorScheme: ColorScheme.fromSwatch().copyWith(
-        //   primary: Colors.blue,
-        //   // background: Colors.grey,
-        //   // onPrimary: Colors.grey,
-        // ),
-
-      ),
       getPages: Pages.routes,
+      // initialRoute: Routes.home,
       home: const MyHomePage(title: 'Practice Flutter'),
     );
   }
@@ -45,6 +45,18 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
 
+  late StreamSubscription? _sub;
+
+  @override
+  void initState() {
+    super.initState();
+    getInitialLink().then((value) {
+    });
+      _sub = uriLinkStream.listen((event) {
+        debugPrint('event: $event');
+      });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -56,6 +68,12 @@ class _MyHomePageState extends State<MyHomePage> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
+
+              TextButton(onPressed: () {
+                Get.toNamed(Routes.previewExcelFile);
+              }, child: const Text('显示Excel文件')),
+
+              const SizedBox(height: 5,),
 
               TextButton(onPressed: () {
                 Get.toNamed(Routes.getXExample);
@@ -253,6 +271,50 @@ class _MyHomePageState extends State<MyHomePage> {
                 Get.toNamed(Routes.clipRectExample);
               }, child: const Text('Clip Rect Example')),
 
+              const SizedBox(height: 5,),
+
+              TextButton(onPressed: () {
+                Get.toNamed(Routes.uniLineExample);
+              }, child: const Text('Uni Line Example')),
+
+              const SizedBox(height: 5,),
+
+              TextButton(onPressed: () {
+                Get.toNamed(Routes.recordExample);
+              }, child: const Text('Record Example')),
+
+              const SizedBox(height: 5,),
+
+              TextButton(onPressed: () {
+
+                // Navigator.of(context).push(MaterialPageRoute(builder: (context) {
+                //   return const WillPopScopeExample();
+                // }));
+
+                Get.to(const WillPopScopeExample());
+
+
+              }, child: const Text('Will Pop Scope Example')),
+
+              const SizedBox(height: 5,),
+
+              TextButton(onPressed: () {
+                Get.toNamed(Routes.layoutExample);
+              }, child: const Text('Layout Example')),
+
+              const SizedBox(height: 5,),
+
+              TextButton(onPressed: () {
+                Get.toNamed(Routes.shareCSVFileExample);
+              }, child: const Text('分享CSV文件')),
+
+
+              const SizedBox(height: 5,),
+
+              TextButton(onPressed: () {
+                Get.toNamed(Routes.dropdownButtonExample);
+              }, child: const Text('测试 Dropdown 按钮')),
+
               const SizedBox(height: 40,),
 
             ],
@@ -261,4 +323,11 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
     );
   }
+
+  @override
+  void dispose() {
+    _sub?.cancel();
+    super.dispose();
+  }
+
 }

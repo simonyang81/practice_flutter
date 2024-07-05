@@ -29,18 +29,46 @@ class _FractionallySizedBoxExampleState extends State<FractionallySizedBoxExampl
   }
 
   Widget _buildContent() {
-    return Container(
-      color: Colors.blue,
-      width: double.infinity,
-      height: 200,
-      child: FractionallySizedBox(
+    return SingleChildScrollView(
+      child: Column(
+        children: [
+          Container(
+            color: Colors.blue,
+            width: double.infinity,
+            height: 200,
+            child: FractionallySizedBox(
+              alignment: Alignment.centerRight,
+              widthFactor: 0.2,
+              heightFactor: 0.62,
+              child: Container(
+                color: Colors.red,
+              ),
+            ),
+          ),
+          const Padding(
+            padding: EdgeInsets.all(20),
+            child: Text('可以设置 widthFactor 和 heightFactor，占父组件的比例', style: TextStyle(fontSize: 18),),
+          ),
+          const Text('''
+          核心代码:
+          Container(
+            color: Colors.blue,
+            width: double.infinity,
+            height: 200,
+            child: FractionallySizedBox(
+              alignment: Alignment.centerRight,
+              widthFactor: 0.2,
+              heightFactor: 0.62,
+              child: Container(
+                color: Colors.red,
+              ),
+            ),
+          )
+          ''', style: TextStyle(fontSize: 15),
 
-        alignment: Alignment.center,
-        widthFactor: 0.62,
-        heightFactor: 0.9,
-        child: Container(
-          color: Colors.red,
-        ),
+          )
+
+        ],
       ),
     );
   }

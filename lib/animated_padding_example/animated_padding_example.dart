@@ -8,7 +8,6 @@
 ///
 ///
 
-import 'package:f_logs/f_logs.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -52,7 +51,7 @@ class _AnimatedPaddingExampleState extends State<AnimatedPaddingExample> {
             color: Colors.blue,
           ),
           onEnd: () {
-            FLog.info(text: 'onEnd');
+            debugPrint('onEnd');
           },
         ),
 

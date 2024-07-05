@@ -1,4 +1,4 @@
-import 'package:f_logs/f_logs.dart';
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import 'get_x_example_state.dart';
@@ -10,11 +10,12 @@ class GetXExampleLogic extends GetxController {
   @override
   void onReady() {
     super.onReady();
-    FLog.info(text: '##GetXExampleLogic.onReady##');
+    debugPrint('#GetXExampleLogic.onReady#');
   }
 
   @override
   void onClose() {
+    debugPrint('#GetXExampleLogic.onClose#');
     super.onClose();
   }
 }

@@ -122,7 +122,6 @@ class _MyHomePageState extends State<MyHomePage> {
     alertAlignment: Alignment.center,
   );
 
-
   Future<void> _selectTime3(BuildContext context) async {
     Alert(
       context: context,
@@ -233,14 +232,14 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             Text(
               _time == null ? '请选择时间' : _time!.format(context),
-              style: Theme.of(context).textTheme.headline4,
+              style: Theme.of(context).textTheme.headlineSmall,
             ),
           ],
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () => _showModalBottomSheet(context),
-        // onPressed: () => _selectTime1(context),
+        // onPressed: () => _showModalBottomSheet(context),
+        onPressed: () => _selectTime1(context),
         tooltip: '选择时间',
         child: Icon(Icons.access_time),
       ),

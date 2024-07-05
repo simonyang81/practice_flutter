@@ -13,6 +13,7 @@ abstract class Routes {
   static const appRoot = '/';
 
   static const main                 = '/main';
+  static const home                 = '/home';
 
   static const getXExample    = '/get-x-example';
 
@@ -47,8 +48,13 @@ abstract class Routes {
   static const aspectRatioExample         = '/aspect-ratio-example';
   static const fractionallySizedBoxExample  = '/fractionally-sized-box-example';
   static const clipRectExample            = '/clip-rect-example';
-
+  static const uniLineExample             = '/uni-line-example';
+  static const recordExample              = '/record-example';
   static const canvasExample              = '/canvas-example';
+  static const layoutExample              = '/layout-example';
+  static const shareCSVFileExample        = '/share-csv-file-example';
+  static const previewExcelFile           = '/preview-excel-file';
+  static const dropdownButtonExample      = '/dropdown-button-example';
 
 
 }

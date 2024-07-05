@@ -8,7 +8,6 @@
 ///
 ///
 
-import 'package:f_logs/f_logs.dart';
 import 'package:flutter/material.dart';
 
 class PaddingExample extends StatelessWidget {
@@ -37,7 +36,7 @@ class PaddingExample extends StatelessWidget {
                 alignment: Alignment.centerLeft,
                 child: InkWell(
                   onTap: () {
-                    FLog.info(text: 'Tap on green');
+                    debugPrint('Tap on green -->>');
                   },
                   child: Container(
                     width: 100,
@@ -50,7 +49,7 @@ class PaddingExample extends StatelessWidget {
                 alignment: Alignment.center,
                 child: InkWell(
                   onTap: () {
-                    FLog.info(text: 'Tap on red');
+                    debugPrint('Tap on red -->>');
                   },
                   child: Container(
                     width: 100,
