@@ -55,6 +55,10 @@ abstract class Routes {
   static const shareCSVFileExample        = '/share-csv-file-example';
   static const previewExcelFile           = '/preview-excel-file';
   static const dropdownButtonExample      = '/dropdown-button-example';
+  static const nestedScrollViewExample    = '/nested-scroll-view-example';
+  static const nestedScrollViewExample2   = '/nested-scroll-view-example2';
+  static const nestedScrollViewBase       = '/nested-scroll-view-base';
+  static const nestedScrollViewBase3      = '/nested-scroll-view-base3';
 
 
 }

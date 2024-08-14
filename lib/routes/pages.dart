@@ -27,6 +27,7 @@ import 'package:practice_flutter/heating_example/heating_example.dart';
 import 'package:practice_flutter/hook_example/hook_example.dart';
 import 'package:practice_flutter/layout_example/layout_example.dart';
 import 'package:practice_flutter/list_example/list_view_example.dart';
+import 'package:practice_flutter/nested_scroll_view_example/nested_scroll_view_example2.dart';
 import 'package:practice_flutter/overflow_box_example/overflow_box_example.dart';
 import 'package:practice_flutter/painter_example/painter_example.dart';
 import 'package:practice_flutter/preview_file/preview_excel_file.dart';
@@ -45,6 +46,9 @@ import '../aspect_ratio_example/aspect_ratio_example.dart';
 import '../button_example/button_example.dart';
 import '../dialog_example/dialog_example.dart';
 import '../material_app_example/material_app_example1.dart';
+import '../nested_scroll_view_example/nested_scroll_base_use_page.dart';
+import '../nested_scroll_view_example/nested_scroll_base_use_page3.dart';
+import '../nested_scroll_view_example/nested_scroll_view_example.dart';
 import '../padding_example/padding_example.dart';
 import '../scaffold_example/scaffold_example.dart';
 import '../tab_bar_example/tab_bar_example.dart';
@@ -206,6 +210,14 @@ class Pages {
     GetPage(name: Routes.previewExcelFile, page: () => const PreviewExcelFile(), transition: Transition.rightToLeft,),
 
     GetPage(name: Routes.dropdownButtonExample, page: () => const DropdownButtonExample(), transition: Transition.rightToLeft,),
+
+    GetPage(name: Routes.nestedScrollViewExample, page: () => const NestedScrollViewExample(), transition: Transition.rightToLeft,),
+
+    GetPage(name: Routes.nestedScrollViewExample2, page: () => const NestedScrollViewExample2(), transition: Transition.rightToLeft,),
+
+    GetPage(name: Routes.nestedScrollViewBase, page: () => const NestScrollBaseUsePage(), transition: Transition.rightToLeft,),
+
+    GetPage(name: Routes.nestedScrollViewBase3, page: () => const NestScrollBaseUsePage3(), transition: Transition.rightToLeft,),
 
   ];
 

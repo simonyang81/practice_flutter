@@ -315,6 +315,30 @@ class _MyHomePageState extends State<MyHomePage> {
                 Get.toNamed(Routes.dropdownButtonExample);
               }, child: const Text('测试 Dropdown 按钮')),
 
+              const SizedBox(height: 5,),
+
+              TextButton(onPressed: () {
+                Get.toNamed(Routes.nestedScrollViewExample);
+              }, child: const Text('NestedScrollView 使用示例')),
+
+              const SizedBox(height: 5,),
+
+              TextButton(onPressed: () {
+                Get.toNamed(Routes.nestedScrollViewExample2);
+              }, child: const Text('NestedScrollView 使用示例2')),
+
+              const SizedBox(height: 5,),
+
+              TextButton(onPressed: () {
+                Get.toNamed(Routes.nestedScrollViewBase);
+              }, child: const Text('NestedScrollView 使用示例3')),
+
+              const SizedBox(height: 5,),
+
+              TextButton(onPressed: () {
+                Get.toNamed(Routes.nestedScrollViewBase3);
+              }, child: const Text('NestedScrollView 使用示例4')),
+
               const SizedBox(height: 40,),
 
             ],
