@@ -12,7 +12,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 
 class SpinkitExample extends StatefulWidget {
-  const SpinkitExample({Key? key}) : super(key: key);
+  const SpinkitExample({super.key});
 
   @override
   State<SpinkitExample> createState() => _SpinkitExampleState();

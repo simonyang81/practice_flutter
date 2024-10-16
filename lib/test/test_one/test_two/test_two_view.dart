@@ -4,7 +4,7 @@ import 'package:get/get.dart';
 import 'test_two_logic.dart';
 
 class TestTwoPage extends StatelessWidget {
-  const TestTwoPage({Key? key}) : super(key: key);
+  const TestTwoPage({super.key});
 
   @override
   Widget build(BuildContext context) {

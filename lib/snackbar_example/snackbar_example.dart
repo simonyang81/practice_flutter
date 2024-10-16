@@ -11,7 +11,7 @@ import 'package:flutter/material.dart';
 ///
 
 class SnackBarExample extends StatefulWidget {
-  const SnackBarExample({Key? key}) : super(key: key);
+  const SnackBarExample({super.key});
 
   @override
   State<SnackBarExample> createState() => _SnackBarExampleState();

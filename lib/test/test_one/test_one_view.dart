@@ -4,7 +4,7 @@ import 'package:get/get.dart';
 import 'test_one_logic.dart';
 
 class TestOnePage extends StatefulWidget {
-  const TestOnePage({Key? key}) : super(key: key);
+  const TestOnePage({super.key});
 
   @override
   State<TestOnePage> createState() => _TestOnePageState();

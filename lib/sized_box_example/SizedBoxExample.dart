@@ -11,7 +11,7 @@
 import 'package:flutter/material.dart';
 
 class SizedBoxExample extends StatefulWidget {
-  const SizedBoxExample({Key? key}) : super(key: key);
+  const SizedBoxExample({super.key});
 
   @override
   State<SizedBoxExample> createState() => _SizedBoxExampleState();
@@ -30,7 +30,7 @@ class _SizedBoxExampleState extends State<SizedBoxExample> {
 
   Widget _buildContent() {
     return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 10),
+      padding: const EdgeInsets.symmetric(horizontal: 10),
       child: Container(
 
         decoration: BoxDecoration(
@@ -39,7 +39,7 @@ class _SizedBoxExampleState extends State<SizedBoxExample> {
             width: 1.5,
             style: BorderStyle.solid,
           ),
-          borderRadius: BorderRadius.all(Radius.circular(10)),
+          borderRadius: const BorderRadius.all(Radius.circular(10)),
 
           // color: Colors.red,
 
@@ -48,11 +48,11 @@ class _SizedBoxExampleState extends State<SizedBoxExample> {
           children: [
 
             Container(
-              constraints: BoxConstraints(
+              constraints: const BoxConstraints(
                 maxHeight: 300,
                 maxWidth: 300,
               ),
-              child: SizedBox.expand(
+              child: const SizedBox.expand(
                 child: Text('Hello SIMON 2'),
               ),
             ),

@@ -6,10 +6,10 @@ class RemainingTime extends StatefulWidget {
   final TextStyle textStyle;
 
   const RemainingTime({
-    Key? key,
+    super.key,
     required this.totalSeconds,
     required this.textStyle,
-  }) : super(key: key);
+  });
 
   @override
   State<RemainingTime> createState() => _RemainingTimeState();

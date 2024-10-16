@@ -15,7 +15,7 @@ import '../widgets/battery_indicator.dart';
 import 'battery_icon.dart';
 
 class TextExample extends StatelessWidget {
-  const TextExample({Key? key}) : super(key: key);
+  const TextExample({super.key});
 
   final double level = 0.5;
 
@@ -25,7 +25,7 @@ class TextExample extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Text Example'),
       ),
-      body: Center(
+      body: const Center(
         child: BatteryIcon(
           level: 1,
           batteryColor: Colors.green,
@@ -95,7 +95,7 @@ class TextExample extends StatelessWidget {
 
   Widget _buildContent() {
     return Center(
-      child: Container(
+      child: SizedBox(
         width: 55,
         height: 20,
         child: Stack(

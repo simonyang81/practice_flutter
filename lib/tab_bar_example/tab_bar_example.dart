@@ -12,7 +12,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class TabBarExample extends StatefulWidget {
-  const TabBarExample({Key? key}) : super(key: key);
+  const TabBarExample({super.key});
 
   @override
   State<TabBarExample> createState() => _TabBarExampleState();

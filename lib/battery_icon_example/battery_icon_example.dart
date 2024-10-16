@@ -13,7 +13,7 @@ import 'package:flutter/material.dart';
 import '../text_example/battery_icon.dart';
 
 class BatteryIconExample extends StatefulWidget {
-  const BatteryIconExample({Key? key}) : super(key: key);
+  const BatteryIconExample({super.key});
 
   @override
   State<BatteryIconExample> createState() => _BatteryIconExampleState();

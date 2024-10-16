@@ -11,7 +11,7 @@
 import 'package:flutter/material.dart';
 
 class UniLinksExample extends StatefulWidget {
-  const UniLinksExample({Key? key}) : super(key: key);
+  const UniLinksExample({super.key});
 
   @override
   State<UniLinksExample> createState() => _UniLinksExampleState();

@@ -12,7 +12,7 @@ import 'package:flutter/material.dart';
 import 'box_text_widget.dart';
 
 class BoxConstraintsExample extends StatelessWidget {
-  const BoxConstraintsExample({Key? key}) : super(key: key);
+  const BoxConstraintsExample({super.key});
 
   @override
   Widget build(BuildContext context) {

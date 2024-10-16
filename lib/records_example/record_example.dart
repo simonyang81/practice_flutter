@@ -11,7 +11,7 @@
 import 'package:flutter/material.dart';
 
 class RecordExample extends StatefulWidget {
-  const RecordExample({Key? key}) : super(key: key);
+  const RecordExample({super.key});
 
   @override
   State<RecordExample> createState() => _RecordExampleState();

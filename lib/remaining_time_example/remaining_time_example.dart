@@ -14,7 +14,7 @@ import '../widgets/remaining_time.dart';
 
 
 class RemainingTimeExample extends StatelessWidget {
-  const RemainingTimeExample({Key? key}) : super(key: key);
+  const RemainingTimeExample({super.key});
 
   @override
   Widget build(BuildContext context) {

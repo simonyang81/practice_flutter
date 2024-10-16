@@ -14,7 +14,7 @@ import 'package:flutter/services.dart';
 import '../widgets/smn_input_decoration.dart';
 
 class TextFieldExample extends StatefulWidget {
-  const TextFieldExample({Key? key}) : super(key: key);
+  const TextFieldExample({super.key});
 
   @override
   State<TextFieldExample> createState() => _TextFieldExampleState();
@@ -27,10 +27,10 @@ class _TextFieldExampleState extends State<TextFieldExample> {
       appBar: AppBar(
         title: const Text('TextFiled Example'),
       ),
-      body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 20),
+      body: const Padding(
+        padding: EdgeInsets.symmetric(horizontal: 20),
         child: Column(
-          children: const [
+          children: [
             TextField(
               decoration: InputDecoration(
                 // 设置无边框

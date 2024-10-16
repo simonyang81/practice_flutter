@@ -64,7 +64,7 @@ class _PreviewExcelFileState extends State<PreviewExcelFile> {
 
         var cellA0 = sheetObject.cell(CellIndex.indexByColumnRow(columnIndex: 0, rowIndex: 0));
         sheetObject.setRowHeight(0, 100.0);
-        cellA0.value = const TextCellValue('1\n2\n3');
+        cellA0.value = TextCellValue('1\n2\n3');
         cellA0.cellStyle = headerCellStyle;
 
         for (var i = 1; i <= 31; i++) {

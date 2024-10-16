@@ -14,10 +14,10 @@ class BatteryIndicator extends StatelessWidget {
   final Color color;
 
   const BatteryIndicator({
-    Key? key,
+    super.key,
     required this.value,
     this.color = Colors.green,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
